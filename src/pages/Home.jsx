@@ -5,7 +5,6 @@ const Home = () => {
 
     return (
         <>
-            <h1>Quiz Game</h1>
             <Quiz/>
         </>
     );

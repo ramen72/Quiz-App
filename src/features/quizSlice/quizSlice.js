@@ -7,7 +7,7 @@ export const quizSlice = createSlice({
     questions: questions,
     currentQuestionIndex: 0,
     score: 0,
-    quizIsOver: false,
+    isQuizOver: false,
   },
   reducers: {
     submitAnswer: (state, action) => {
@@ -16,7 +16,7 @@ export const quizSlice = createSlice({
             state.score += 1;
           }
         if( state.currentQuestionIndex === state.questions.length - 1 ){
-            state.quizIsOver = true;
+            state.isQuizOver = true;
         }else{
             state.currentQuestionIndex++
         }
