@@ -20,11 +20,15 @@ export const quizSlice = createSlice({
         }else{
             state.currentQuestionIndex++
         }
-        console.log(action.payload, currentQuestion.correctAnswer, state.score)
     },
+    reset: (state) => {
+      state.currentQuestionIndex = 0;
+      state.score = 0;
+      state.isQuizOver = false
+    }
   },
 })
 
-export const { submitAnswer, } = quizSlice.actions
+export const { submitAnswer, reset, } = quizSlice.actions
 
 export default quizSlice.reducer
